@@ -116,7 +116,7 @@ rights).
 ### Obtaining access and refresh tokens
 
 After obtaining the `authorization_code`, the application needs to send a
-server-server POST request to`https://hh.ru/oauth/token` to change the
+server-server request `POST https://hh.ru/oauth/token` to change the
 `authorization_code` obtained for an `access_token`.
 
 The request should contain the following information:
@@ -132,7 +132,7 @@ parameter is optional. If `redirect_uri` is not indicated when requesting
 (`/oauth/token`), the server will return an error.
 
 Request body must be sent in standard `application/x-www-form-urlencoded`
-with the indication of a corresponding title `Content-Type`.
+with the indication of a corresponding header `Content-Type`.
 
 JSON will be returned in the response:
 
@@ -153,8 +153,8 @@ response returns with the body:
 
 ```json
 {
-    "error": "...",
-    "error_description": "..."
+    "error": "invalid_request",
+    "error_description": "account not found"
 }
 ```
 
@@ -203,17 +203,17 @@ further api requests and token renewal requests.
 <a name="get-client-auth"></a>
 ## Obtaining application authorization
 
-For obtaining the `authorization_code`, the application needs to send a
-server-server POST request to`https://hh.ru/oauth/token`.
+For obtaining an `authorization_code`, the application needs to send a
+server-server request `POST https://hh.ru/oauth/token`.
 
-The request should contain the following information:
+The request body should contain the following information:
 
 ```
 grant_type=client_credentials&client_id={client_id}&client_secret={client_secret}
 ```
 
 Request body must be sent in standard `application/x-www-form-urlencoded`
-with the indication of a corresponding title `Content-Type`.
+with the indication of a corresponding header `Content-Type`.
 
 JSON will be returned in the response:
 
@@ -232,8 +232,8 @@ If the obtaining fails, then the `400 Bad Request` response returns with the bod
 
 ```json
 {
-    "error": "...",
-    "error_description": "..."
+    "error": "invalid_client",
+    "error_description": "client_id or client_secret not found"
 }
 ```
 
@@ -268,8 +268,8 @@ Authorization: Bearer access_token
 Documentation on the response from `/me` [in the corresponding section](me.md).
 
 Documentation on the response from `/me` in the corresponding section:
-* [authorized user](me.md)
-* [authorized application](me_application.md)
+* [authorized user](me.md#user-info)
+* [authorized application](me.md#application-info)
 
 [Authorization error description](errors.md#oauth).
 

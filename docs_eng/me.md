@@ -1,10 +1,11 @@
-# Current user
+# Info on authorized client
 
-* [Obtaining info on the current user](#info)
-* [Editing info on the current user](#edit)
+* [Obtaining info on the current user](#user-info)
+* [Editing info on the current user](#user-edit)
+* [Obtaining info on the authorized application](#application-info)
 
 
-<a name="info"></a>
+<a name="user-info"></a>
 ## Obtaining info on the current user
 
 `GET /me` returns info on current authorized user.
@@ -116,7 +117,7 @@ unread_negotiations | Number of unread negotiations (indicating `has_updates: tr
 new_resume_views | Total number of new views of all CVs of the current user
 
 
-<a name="edit"></a>
+<a name="user-edit"></a>
 ## Editing info on the current user
 
 Send POST request to `/me` in order to edit the last name, name, middle name or
@@ -155,3 +156,17 @@ Example:
 ```
 
 If request contains parameters from different groups, `400 Bad Request` is returned.
+
+<a name="info"></a>
+## Obtaining info on the authorized application
+
+`GET /me` returns a response body similar to [obtaining info on the current user](#user-info), but only the flags. Server returns `403 Forbidden` if authorization is failed.
+
+```json
+{
+    "is_admin": false,
+    "is_applicant": false,
+    "is_employer": false,
+    "is_application": true
+}
+```

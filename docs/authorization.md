@@ -120,8 +120,7 @@ Location: {redirect_uri}?code={authorization_code}
 <a name="get-tokens"></a>
 ### Получение access и refresh токенов
 
-После получения `authorization_code` приложению необходимо сделать сервер-сервер
-POST-запрос на `https://hh.ru/oauth/token` для обмена полученного
+После получения `authorization_code` приложению необходимо сделать сервер-сервер запрос `POST https://hh.ru/oauth/token` для обмена полученного
 `authorization_code` на `access_token`.
 
 В запросе необходимо передать дополнительные параметры:
@@ -222,7 +221,7 @@ error_description | строка | Дополнительное описание
 
 <a name="get-client-auth"></a>
 ## Получение авторизации приложения
-Для получения `access_token` приложению необходимо сделать сервер-сервер POST-запрос на https://hh.ru/oauth/token.
+Для получения `access_token` приложению необходимо сделать сервер-сервер запрос `POST https://hh.ru/oauth/token`.
 
 В запросе необходимо передать дополнительные параметры:
 
@@ -250,8 +249,8 @@ error_description | строка | Дополнительное описание
 
 ```json
 {
-    "error": "invalid_request",
-    "error_description": "bad redirect url"
+    "error": "invalid_client",
+    "error_description": "client_id or client_secret not found"
 }
 ```
 
@@ -361,8 +360,8 @@ Authorization: Bearer access_token
 ```
 
 Документация по ответу от `/me` в соответствующих разделах:
-* [для авторизованного пользователя](me.md)
-* [для авторизованного приложения](me_application.md)
+* [для авторизованного пользователя](me.md#user-info)
+* [для авторизованного приложения](me.md#application-info)
 
 [Описание ошибок авторизации](errors.md#oauth).
 
