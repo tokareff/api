@@ -23,9 +23,9 @@ Article labels:
   for anonymous requests, authrization isn't required.
 * <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> - for application requests, authrization is required.
 * <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> –
-  for applicant requests, authrization is required.
+  for applicant requests, user authrization is required.
 * <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" /> –
-  for employer requests, authrization is required.
+  for employer requests, user authrization is required.
 
 
 * [General information](general.md) <img src="http://hhru.github.io/api/badges/anon.png" alt="anonymous" /> <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
@@ -40,10 +40,10 @@ Article labels:
 <a name="context"></a>
 ### Context
 
-* [Info on authorized client](me.md) <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
-  * [Obtaining info on the current user](me.md#user-info) <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
-  * [Editing info on the current user](me.md#user-edit) <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
-  * [Obtaining info on the authorized application](me.md#application-info) <img src="http://hhru.github.io/api/badges/client.png" alt="client" />
+* [Information about authorized user or application](me.md) <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
+  * [Obtaining info about the authorized user](me.md#user-info) <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
+  * [Editing info about the authorized user](me.md#user-edit) <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
+  * [Obtaining info about the authorized application](me.md#application-info) <img src="http://hhru.github.io/api/badges/client.png" alt="client" />
 * [Manager preferences](manager_settings.md) <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
 * [Locales](locales.md) <img src="http://hhru.github.io/api/badges/anon.png" alt="anonymous" /> <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />
 * [Site choice](hosts.md) <img src="http://hhru.github.io/api/badges/anon.png" alt="anonymous" /> <img src="http://hhru.github.io/api/badges/client.png" alt="client" /> <img src="http://hhru.github.io/api/badges/app.png" alt="applicant" /> <img src="http://hhru.github.io/api/badges/emp.png" alt="employer" />

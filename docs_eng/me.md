@@ -1,12 +1,12 @@
-# Info on authorized client
+# Information about authorized user or application
 
-* [Obtaining info on the current user](#user-info)
-* [Editing info on the current user](#user-edit)
-* [Obtaining info on the authorized application](#application-info)
+* [Obtaining info about the authorized user](#user-info)
+* [Editing info about the authorized user](#user-edit)
+* [Obtaining info about the authorized application](#application-info)
 
 
 <a name="user-info"></a>
-## Obtaining info on the current user
+## Obtaining info about the authorized user
 
 `GET /me` returns info on current authorized user.
 Server returns `403 Forbidden` if authorization is failed.
@@ -118,7 +118,7 @@ new_resume_views | Total number of new views of all CVs of the current user
 
 
 <a name="user-edit"></a>
-## Editing info on the current user
+## Editing info about the authorized user
 
 Send POST request to `/me` in order to edit the last name, name, middle name or
 enable/disable "looking for a job yes/no"  flag. Data can be edited only in
@@ -158,9 +158,10 @@ Example:
 If request contains parameters from different groups, `400 Bad Request` is returned.
 
 <a name="info"></a>
-## Obtaining info on the authorized application
+## Obtaining info about the authorized application
 
-`GET /me` returns a response body similar to [obtaining info on the current user](#user-info), but only the flags. Server returns `403 Forbidden` if authorization is failed.
+`GET /me` returns a response body similar to [obtaining info about the authorized user](#user-info), but only the flags. 
+Server returns `403 Forbidden` if authorization is failed.
 
 ```json
 {

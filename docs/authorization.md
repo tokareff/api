@@ -123,7 +123,7 @@ Location: {redirect_uri}?code={authorization_code}
 После получения `authorization_code` приложению необходимо сделать сервер-сервер запрос `POST https://hh.ru/oauth/token` для обмена полученного
 `authorization_code` на `access_token`.
 
-В запросе необходимо передать дополнительные параметры:
+В теле запроса необходимо передать дополнительные параметры:
 
 * `grant_type=authorization_code`
 * `client_id` и `client_secret` - необходимо заполнить значениями, выданными при [регистрации приложения](https://dev.hh.ru/admin)
@@ -180,7 +180,7 @@ error_description | строка | Дополнительное описание
 POST https://hh.ru/oauth/token
 ```
 
-В запросе необходимо передать дополнительные параметры:
+В теле запроса необходимо передать дополнительные параметры:
 * `grant_type=refresh_token`
 * `refresh_token` – refresh-токен, полученный ранее при
   [получении пары токенов](#get-tokens) или прошлом обновлении пары

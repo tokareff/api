@@ -119,7 +119,7 @@ After obtaining the `authorization_code`, the application needs to send a
 server-server request `POST https://hh.ru/oauth/token` to change the
 `authorization_code` obtained for an `access_token`.
 
-The request should contain the following information:
+The request body should contain the following information:
 
 ```
 grant_type=authorization_code&client_id={client_id}&client_secret={client_secret}&code={authorization_code}&redirect_uri={redirect_uri}
